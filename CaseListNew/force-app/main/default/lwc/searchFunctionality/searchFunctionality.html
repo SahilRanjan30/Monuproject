@@ -1,0 +1,21 @@
+<template>
+    <lightning-card label="Contact Search">
+    <div class="slds-m-around_medium">
+        <div class="slds-m-bottom_small">
+            <lightning-input type="text"
+               value={searchValue}
+               label="Enter Contact for Search"
+               onchange={searchKeyword}
+               ></lightning-input>
+         </div>
+            <div if:true={dataFlag} style="height: 300px;">
+                <lightning-datatable
+                        key-field="id"
+                        data={data}
+                        columns={columns}
+                        hide-checkbox-column="false">
+                </lightning-datatable>
+            </div>
+      </div>
+    </lightning-card>
+</template>

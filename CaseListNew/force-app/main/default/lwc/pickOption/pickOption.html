@@ -1,0 +1,34 @@
+<template>
+    <lightning-modal-header label="Select Options">
+    </lightning-modal-header>
+    <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-3 slds-var-p-around_large">
+            <div class="slds-grid">
+                <div class="slds-col slds-size_1-of-1">
+                    <lightning-vertical-navigation selected-item={selectedItem} onselect={handleSelect}
+                        class="navigation">
+                        <lightning-vertical-navigation-section label="Select Options">
+                            <lightning-vertical-navigation-item-icon label="Option 1" icon-name="Option 1"
+                                name="Option 1"></lightning-vertical-navigation-item-icon>
+                            <lightning-vertical-navigation-item-icon label="Option 2" icon-name="Option 2"
+                                name="Option 2"></lightning-vertical-navigation-item-icon>
+                            <lightning-vertical-navigation-item-icon label="Option 3"
+                                icon-name="Option 3" name="Option 3"></lightning-vertical-navigation-item-icon>
+                        </lightning-vertical-navigation-section>
+                    </lightning-vertical-navigation>
+                </div>
+            </div>
+        </div>
+        <div class="slds-col slds-size_2-of-3 slds-var-p-around_large">
+            <p>I am in : {currentContent}</p>
+        </div>
+    </div>
+    <lightning-modal-footer>
+        <lightning-button
+            class="slds-button slds-text-align_right"
+            variant="brand"
+            label="Close"
+            onclick={handleCancel}>
+        </lightning-button>
+    </lightning-modal-footer>
+</template>

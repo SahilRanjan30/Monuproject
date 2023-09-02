@@ -1,0 +1,21 @@
+input {
+    vertical-align: middle;
+    margin: 5px;
+    padding: 10px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    font-size: 16px;
+}
+h2{
+    font-weight: 700;
+    font-size: 18px;
+}
+.child-wrapper{
+    padding: 10px;
+    border: 2px solid #45c23c;
+    margin: 10px;
+}
+.parent-wrapper{
+    border: 5px solid #0083e0;
+    padding: 5px;
+}

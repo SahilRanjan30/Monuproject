@@ -1,0 +1,22 @@
+<template>
+    <table class="case-list">
+        <thead>
+          <tr>
+            <th>Case Number</th>
+            <th>Subject</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+           <template for:each={cases} for:item="caseItem" key={caseItem.Id}>
+            <tr key={caseItem.Id}>
+              <td>{caseItem.Number}</td>
+              <td>{caseItem.Subject}</td>
+              <td>
+                <lightning-input type="text" value={caseItem.Status} onchange={handleStatusChange} data-case-id={caseItem.Id} data-current-status={caseItem.Status}></lightning-input>
+              </td>
+            </tr>
+          </template>
+        </tbody>
+      </table>
+</template>

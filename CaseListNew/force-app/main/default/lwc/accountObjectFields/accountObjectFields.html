@@ -1,0 +1,56 @@
+<template>
+    <div class="slds-m-around_medium">
+    <div class="slds-grid slds-gutters"> 
+        <div class="slds-col slds-size_6-of-12">
+            <template if:true={account.data}>
+                <template if:true={accountName}>
+                    <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">  
+                        <span class="slds-form-element__label">Account Name</span>
+                        <div class="slds-form-element__control">
+                        <div class="slds-form-element__static">{accountName}</div>
+                        </div>
+                        </div>
+                </template>
+            </template>
+        </div>
+        <div class="slds-col slds-size_6-of-12">
+            <template if:true={account.data}>
+                <template if:true={accountNumber}>
+                    <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+                        <span class="slds-form-element__label">Account Number</span>
+                        <div class="slds-form-element__control">
+                        <div class="slds-form-element__static">{accountNumber}</div>
+                        </div>
+                        </div>
+                </template>
+            </template>
+        </div>
+      </div>
+      <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_6-of-12">
+            <template if:true={account.data}>
+                <template if:true={revenue}>
+                    <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">  
+                        <span class="slds-form-element__label">Account Revenue</span>
+                        <div class="slds-form-element__control">
+                        <div class="slds-form-element__static">{revenue}</div>
+                        </div>
+                        </div>
+                </template>
+            </template>
+        </div>
+        <div class="slds-col slds-size_6-of-12">
+            <template if:true={account.data}>
+                <template if:true={description}>    
+                    <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">  
+                        <span class="slds-form-element__label">Description</span>
+                        <div class="slds-form-element__control">
+                        <div class="slds-form-element__static">{description}</div>
+                        </div>
+                        </div>
+                </template>
+            </template>
+        </div>
+      </div>
+    </div>
+</template>

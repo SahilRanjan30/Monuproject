@@ -1,0 +1,38 @@
+<template>
+    <lightning-card title="Create Account" icon-name="standard:account">
+        <div class="slds-p-around_medium">
+            <lightning-input label="Account Name" value={Name} onchange={handleAccountNameChange}></lightning-input>
+            <lightning-input label="Account Website" value={Website} onchange={handleAccountWebsiteChange}></lightning-input>
+        <lightning-card title="Create Contact" icon-name="standard:contact"></lightning-card>   
+            <lightning-input label="Contact First Name" value={FirstName} onchange={handleContactFirstNameChange}></lightning-input>
+            <lightning-input label="Contact Last Name" value={LastName} onchange={handleContactLastNameChange} required="true"></lightning-input>
+            <lightning-input label="Contact Email" type="email" value={Email} onchange={handleContactEmailChange}></lightning-input>
+            <lightning-input label="Contact Phone Number" type="tel" value={handleContactPhoneChange} onchange={handleContactPhoneChange}></lightning-input>
+            <lightning-file-upload label="Attach File" name="File Upload" accept={acceptedFormats}  onuploadfinished={handleUploadFinished} multiple="true"></lightning-file-upload>
+        </div>
+
+    <lightning-modal-footer>
+        <div class="slds-col slds-size_1-of-1 slds-m-top_medium">
+            <lightning-button-group>
+                <lightning-button
+                    type="submit"
+                    label="Save"
+                    onclick={handleSaveClick}>
+                </lightning-button>
+                <lightning-button
+                    type="submit"
+                    label="Save and New"
+                    variant="brand"
+                    onclick={handleSaveAndNew}>
+                </lightning-button>
+                <lightning-button
+                    type="button"
+                    label="Cancel"
+                    variant="neutral"
+                    onclick={handleCancel}>
+                </lightning-button>
+            </lightning-button-group>
+        </div>
+    </lightning-modal-footer>
+</lightning-card>
+</template>

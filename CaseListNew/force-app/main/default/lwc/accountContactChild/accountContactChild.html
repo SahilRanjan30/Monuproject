@@ -1,0 +1,33 @@
+<template>
+  <div class="slds-theme_shade">
+    <lightning-card variant="Narrow" title="Contact List" icon-name="standard:contact"></lightning-card>
+    <div class="slds-grid slds-wrap">
+        <template for:each={contactlist} for:item="acc">
+          <div class="slds-col slds-size_1-of-2 slds-var-p-around_small" key={acc.id}>
+          <div class="slds-box">
+          <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-5 slds-text-a">
+              <p>Name:</p>
+            </div>
+            <div class="slds-col slds-size_2-of-3">
+              <p>{acc.FirstName}</p>
+            </div>
+            <div class="slds-col slds-size_1-of-5">
+              <p> Email:</p>
+            </div>
+            <div class="slds-col slds-size_2-of-3">
+              <p>{acc.Email}</p>
+            </div>
+            <div class="slds-col slds-size_1-of-5">
+              <p>Phone:</p>
+            </div>
+            <div class="slds-col slds-size_2-of-3">
+              <p>{acc.Phone}</p>
+            </div>
+          </div>
+          </div>
+        </div>
+        </template>
+  </div>
+</div>
+</template>

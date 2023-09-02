@@ -1,0 +1,10 @@
+<template>
+    <div class="cases-overview">
+      <template for:each={caseCounts} for:item="count">
+        <div key={count.status} class="status-count" onclick={handleStatusClick} data-status={count.status}>
+          <span class="status-label">{count.status}</span>
+          <span class="count">{count.count}</span>
+        </div>
+      </template>
+      </div>
+</template>

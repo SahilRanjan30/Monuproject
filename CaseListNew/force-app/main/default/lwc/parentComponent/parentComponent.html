@@ -1,0 +1,20 @@
+<template>
+    <div class="margin-bottom-2rem">
+        <lightning-card title="Parent Component" icon-name="custom:custom16">   
+            <div class="slds-m-around_medium">
+                <div class="parent-wrapper">
+                    <h2>Parent Component</h2>
+                    <div class="field">
+                        <label for="name">Enter your Value:</label>
+                        <input id="percentage" type="number" min="0" max="100" name="percentage" onkeyup={changeHandler}
+                            value={percentage}/>
+                    </div>
+                    <div class="child-wrapper">
+                        <h2>Child Component</h2>
+                        <c-child-Component percentage={percentage}></c-child-Component>
+                    </div>
+                </div>
+            </div>
+        </lightning-card>
+    </div>
+</template>

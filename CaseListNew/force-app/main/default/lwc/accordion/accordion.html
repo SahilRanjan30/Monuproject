@@ -1,0 +1,21 @@
+<template>
+    <lightning-card>
+    <p class="slds-text-heading_small">{activeSectionMessage}</p>
+    <lightning-accordion
+     class="example-accordion"
+     onsectiontoggle={handleToggleSection}
+     active-section-name="B">
+        <template for:each={accountData} for:item="actObj" for:index="index">
+        <lightning-accordion-section name="Account Name" label={actObj.Name} key ={actObj.id}>
+            <div style="height: 150px;">
+                    <lightning-datatable
+                            key-field="id"
+                            data={actObj.Contacts}
+                            columns={columns}>
+                    </lightning-datatable>
+                </div> 
+        </lightning-accordion-section>
+    </template>
+    </lightning-accordion>
+</lightning-card>
+</template>

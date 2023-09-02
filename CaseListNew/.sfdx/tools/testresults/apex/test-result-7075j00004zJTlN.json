@@ -1,0 +1,22 @@
+{
+  "summary": {
+    "outcome": "Skipped",
+    "testsRan": 0,
+    "passing": 0,
+    "failing": 0,
+    "skipped": 0,
+    "passRate": "0%",
+    "failRate": "0%",
+    "skipRate": "0%",
+    "testStartTime": "Fri Jul 14 2023 1:16:13 PM",
+    "testExecutionTimeInMs": 0,
+    "testTotalTimeInMs": 0,
+    "commandTimeInMs": 403,
+    "hostname": "https://tugboat6-dev-ed.my.salesforce.com",
+    "orgId": "00D5j000008wDfrEAE",
+    "username": "sahil.ranjan@tugboat.in",
+    "testRunId": "7075j00004zJTlN",
+    "userId": "0055j000006nsJPAAY"
+  },
+  "tests": []
+}

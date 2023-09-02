@@ -1,0 +1,25 @@
+divCol{
+    background-color: whitesmoke;
+    border: 4px solid #d1d722;
+}
+.divWrk{
+    background-color: whitesmoke;
+    border: 4px solid #D72237;
+    size: 5mm;
+}
+.divOp{
+    background-color: whitesmoke;
+    border: 4px solid #9222d7;
+}
+.divShadow {
+    border-radius: 50%; width:7pc; height:7pc;
+    transition: 100ms linear;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+ }
+ .divShadow:hover {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.03);
+    transition: 100ms linear;
+}

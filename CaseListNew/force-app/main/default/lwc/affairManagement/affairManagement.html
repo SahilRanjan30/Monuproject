@@ -1,0 +1,71 @@
+<template>
+    <lightning-card>
+        <lightning-modal-header label="Affair Management">
+        </lightning-modal-header>
+        <!-- <lightning-tabset variant="scoped" active-tab-value={activeTab}>
+                <lightning-tab label="New Call" value="New Call" onactive={onClick}>
+                </lightning-tab>
+                <lightning-tab label="New Meeting" value="New Meeting" onactive={onClick}>
+                </lightning-tab>
+                <lightning-tab label="New Event" value="New Event" onactive={onClick}>
+                </lightning-tab>
+                <lightning-tab label="New Email" value="New Email" onactive={onClick}>
+                </lightning-tab>
+                <lightning-tab label="New Visit" value="New Visit" onactive={onClick}>
+                </lightning-tab>
+        </lightning-tabset> -->
+        <div class="slds-p-horizontal--small slds-col slds-size_4-of-12 slds-m-bottom--medium">
+            <lightning-combobox name="Engagement Type" label="Engagement Type" placeholder="Select Type" value={type}
+            options={typePicklistValues} onchange={handleEngagementTypeChange}></lightning-combobox>
+        </div>
+        <div class="slds-p-horizontal--small slds-col slds-size_4-of-12 slds-m-bottom--medium">
+            <lightning-combobox name="State" label="State" placeholder="Select Type" value={type}
+            options={stateValues} onchange={handleStateChange}></lightning-combobox>
+        </div>
+        <div class="slds-p-horizontal--small slds-col slds-size_4-of-12 slds-m-bottom--medium">
+            <lightning-input type="date" label="Engagement Date"> </lightning-input>
+        </div>
+        <div class="slds-p-horizontal--small slds-col slds-size_4-of-12 slds-m-bottom--medium">
+        <lightning-input  class="slds-p-left_xx-small" type="checkbox" label="Upcoming Engagement" onchange={handleChange}></lightning-input>
+    </div>
+    <div class="slds-p-horizontal--small slds-col slds-size_4-of-12 slds-m-bottom--medium">
+        <lightning-input  class="slds-p-left_xx-small" type="checkbox" label="Past Engagement" onchange={handleChange}></lightning-input>
+    </div>
+    <!-- <lightning-tabset variant="vertical">
+        <lightning-tab label="Item One">
+            One Content !
+        </lightning-tab>
+        <lightning-tab label="Item Two">
+            Two Content !
+        </lightning-tab>
+        <lightning-tab label="Item Three">
+            Three Content !
+        </lightning-tab>
+    </lightning-tabset> -->
+    <!-- <input type="text" class="search-input" placeholder="Enter search query" value={searchQuery} oninput={handleSearchQueryChange}></input>
+    <button class="search-button" onclick={handleSearchClick}>Search</button>
+    <template if:true={showTable}>
+    </template> -->
+        <lightning-modal-footer>
+            <div class="slds-col slds-size_1-of-1 slds-align_absolute-center">
+                <lightning-button-group>
+                    <lightning-button class="slds-p-left_xx-large"
+                        type="submit"
+                        label="Search"
+                        onclick={handleSearchClick}>
+                        <lightning-datatable
+                        key-field="Id"
+                        data={searchResults} 
+                        columns={columns}
+                    ></lightning-datatable>
+                    </lightning-button>
+                    <lightning-button
+                        type="submit"
+                        label="Clear"
+                        onclick={handleCancel}>
+                    </lightning-button>
+                </lightning-button-group>
+            </div>
+        </lightning-modal-footer>
+    </lightning-card>
+</template>

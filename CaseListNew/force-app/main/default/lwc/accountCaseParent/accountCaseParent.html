@@ -1,0 +1,48 @@
+<template>
+    <div class="slds-clearfix">
+        <lightning-modal-header >
+            <p class="slds-align_absolute-center slds-text-heading_small slds-var-p-bottom_small">  {accName} </p>
+            <p class="slds-align_absolute-center slds-text-heading_small slds-var-p-bottom_small"> Total Cases : {caseCount} </p>
+        </lightning-modal-header>
+        <div class="slds-theme_default" style="height: 20vh;">
+            <div class="slds-grid slds-wrap slds-var-p-around_medium">
+                <div class="slds-col slds-size_3-of-12">
+                    <p class="slds-align_absolute-center slds-text-heading_small slds-var-p-bottom_small"> Open Cases </p>
+                    <div class="divCol divShadow:hover divOp slds-align_absolute-center" data-id='Open' onclick={handleClick}
+                        style="border-radius: 30%; width:3pc; height:3pc;">
+                        {openCaseCount}
+                    </div>
+                </div>
+                <div class="slds-col slds-size_3-of-12">
+                    <p class="slds-align_absolute-center slds-text-heading_small slds-var-p-bottom_small"> Closed Cases </p>
+                    <div class="divCol divWrk slds-align_absolute-center" data-id='Closed' onclick={handleClick}
+                        style="border-radius: 30%; width:3pc; height:3pc;">
+                        {closeCaseCount}
+                    </div>
+                </div>
+                <div class="slds-col slds-size_3-of-12">
+                    <p class="slds-align_absolute-center slds-text-heading_small slds-var-p-bottom_small"> In Progress Cases </p>
+                    <div class="divCol  divOp divShadow:hover slds-align_absolute-center" data-id='In Progress' onclick={handleClick}
+                        style="border-radius: 30%; width:3pc; height:3pc;">
+                        {inProgressCaseCount}
+                    </div>
+                </div>
+                <div class="slds-col slds-size_3-of-12">
+                    <p class="slds-align_absolute-center slds-text-heading_small slds-var-p-bottom_small"> Escalated Cases </p>
+                    <div class="divCol  divOp divShadow:hover slds-align_absolute-center" data-id='Escalated' onclick={handleClick}
+                        style="border-radius: 30%; width:3pc; height:3pc;">
+                        {EscalatedCaseCount}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <template if:true={showTable}>
+            <c-account-case-child
+              class="slds-show slds-is-relative"
+              objlist={datatablelist}
+              casestat={mapKeys}
+              onsave={handleSave}>
+            </c-account-case-child>
+            </template>
+        </div>
+</template>

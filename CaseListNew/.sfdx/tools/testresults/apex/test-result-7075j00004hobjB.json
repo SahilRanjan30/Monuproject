@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "outcome": "Passed",
+    "testsRan": 1,
+    "passing": 1,
+    "failing": 0,
+    "skipped": 0,
+    "passRate": "100%",
+    "failRate": "0%",
+    "skipRate": "0%",
+    "testStartTime": "Tue May 23 2023 2:08:18 PM",
+    "testExecutionTimeInMs": 380,
+    "testTotalTimeInMs": 380,
+    "commandTimeInMs": 417,
+    "hostname": "https://tugboat6-dev-ed.my.salesforce.com",
+    "orgId": "00D5j000008wDfrEAE",
+    "username": "sahil.ranjan@tugboat.in",
+    "testRunId": "7075j00004hobjB",
+    "userId": "0055j000006nsJPAAY"
+  },
+  "tests": [
+    {
+      "id": "07M5j0000034ajWEAQ",
+      "queueItemId": "7095j000000IwVIAA0",
+      "stackTrace": null,
+      "message": null,
+      "asyncApexJobId": "7075j00004hobjBAAQ",
+      "methodName": "test",
+      "outcome": "Pass",
+      "apexLogId": "07L5j00000DsUplEAF",
+      "apexClass": {
+        "id": "01p5j00000MPVSUAA5",
+        "name": "Account_Test",
+        "namespacePrefix": null,
+        "fullName": "Account_Test"
+      },
+      "runTime": 380,
+      "testTimestamp": "2023-05-23T08:38:19.000+0000",
+      "fullName": "Account_Test.test"
+    }
+  ]
+}

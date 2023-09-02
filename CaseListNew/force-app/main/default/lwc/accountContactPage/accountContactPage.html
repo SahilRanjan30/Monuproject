@@ -1,0 +1,14 @@
+<template>
+    <lightning-layout>
+        <lightning-card title="Contact Info">
+            <template for:each={accounts.data} for:item="actObj" for:index="index">
+                <p key={actObj.id} class="slds-p-horizontal_small">
+                    <a href="#" onclick={handleClick} data-accountid={actObj.Id}>{actobj.Name}</a>  
+                </p>
+            </template>
+        </lightning-card>
+    </lightning-layout-item>
+        <c-contact-records-list account-id={accountIdfromparent}></c-contact-records-list>
+    </lightning-layout-item>
+</lightning-layout>
+</template>  

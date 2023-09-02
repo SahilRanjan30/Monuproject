@@ -1,0 +1,26 @@
+<template>
+    <lightning-modal-header label="Opportunity DataTable"></lightning-modal-header>
+    <div style="height: 300px;">
+        <lightning-datatable
+                key-field="id"
+                data={data}
+                columns={columns}>
+        </lightning-datatable>
+    </div>  
+        <br>    
+        <lightning-modal-footer>
+            <lightning-button
+                class="slds-button slds-text-align_right"
+                variant="brand"
+                label="Proceed"
+                onclick={handleclick}>
+            </lightning-button>
+            <lightning-button
+                class="slds-button slds-text-align_right"
+                variant="brand"
+                label="Close"
+                onclick={handleCancel}>
+            </lightning-button>
+        </lightning-modal-footer>
+    
+</template>

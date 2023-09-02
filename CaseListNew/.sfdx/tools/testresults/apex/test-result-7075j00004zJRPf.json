@@ -1,0 +1,50 @@
+{
+  "summary": {
+    "outcome": "Failed",
+    "testsRan": 1,
+    "passing": 0,
+    "failing": 1,
+    "skipped": 0,
+    "passRate": "0%",
+    "failRate": "100%",
+    "skipRate": "0%",
+    "testStartTime": "Fri Jul 14 2023 12:51:06 PM",
+    "testExecutionTimeInMs": 415,
+    "testTotalTimeInMs": 415,
+    "commandTimeInMs": 388,
+    "hostname": "https://tugboat6-dev-ed.my.salesforce.com",
+    "orgId": "00D5j000008wDfrEAE",
+    "username": "sahil.ranjan@tugboat.in",
+    "testRunId": "7075j00004zJRPf",
+    "userId": "0055j000006nsJPAAY"
+  },
+  "tests": [
+    {
+      "id": "07M5j0000035gxHEAQ",
+      "queueItemId": "7095j000000J2UmAAK",
+      "stackTrace": "Class.CaseStatusCount.getCaseCounts: line 28, column 1\nClass.TestCaseStatusCount.testCaseStatus: line 9, column 1",
+      "message": "System.ListException: List index out of bounds: 0",
+      "asyncApexJobId": "7075j00004zJRPfAAO",
+      "methodName": "testCaseStatus",
+      "outcome": "Fail",
+      "apexLogId": "07L5j00000EMzS8EAL",
+      "apexClass": {
+        "id": "01p5j00000OEf9KAAT",
+        "name": "TestCaseStatusCount",
+        "namespacePrefix": null,
+        "fullName": "TestCaseStatusCount"
+      },
+      "runTime": 415,
+      "testTimestamp": "2023-07-14T07:21:07.000+0000",
+      "fullName": "TestCaseStatusCount.testCaseStatus",
+      "diagnostic": {
+        "exceptionMessage": "System.ListException: List index out of bounds: 0",
+        "exceptionStackTrace": "Class.CaseStatusCount.getCaseCounts: line 28, column 1\nClass.TestCaseStatusCount.testCaseStatus: line 9, column 1",
+        "className": "CaseStatusCount",
+        "compileProblem": "",
+        "lineNumber": 28,
+        "columnNumber": 1
+      }
+    }
+  ]
+}

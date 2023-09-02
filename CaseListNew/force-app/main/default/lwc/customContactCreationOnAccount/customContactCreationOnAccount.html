@@ -1,0 +1,40 @@
+<template>
+    <lightning-modal-header label="Create Contact"></lightning-modal-header>
+    <lightning-modal-body >
+        <div if:false={loaded} class="slds-is-relative">
+            <lightning-spinner variant="brand" alternative-text="Loading" size="medium"></lightning-spinner>
+        </div>
+        <div class="slds-grid slds-wrap slds-var-p-around_small" >
+        
+        <div class="slds-p-around_medium slds-col slds-size_1-of-2">
+            <lightning-input type="text" label="First Name:" onchange={handleFirstName}></lightning-input>
+        </div>
+
+        <div class="slds-p-around_medium  slds-size_1-of-2">
+            <lightning-input type="text" label="Last Name:" required="true" onchange={handleLastName}></lightning-input>
+        </div>
+
+        <div class="slds-p-around_medium  slds-size_1-of-2">
+            <lightning-input type="text" label="Email:" onchange={handleEmail}></lightning-input>
+        </div>
+
+        <div class="slds-p-around_medium  slds-size_1-of-2">
+            <lightning-input type="text" label="Phone Number:" onchange={handlePhoneNumber}></lightning-input>
+        </div>
+    </div>
+</lightning-modal-body>
+        <lightning-modal-footer>
+            <lightning-button
+                class="slds-button slds-text-align_right"
+                variant="brand"
+                label="Save"
+                onclick={handleSave}
+            ></lightning-button>
+            <lightning-button
+                class="slds-button slds-text-align_right"
+                variant="brand"
+                label="Close"
+                onclick={handleCancel}>
+            </lightning-button>
+</lightning-modal-footer>
+</template>

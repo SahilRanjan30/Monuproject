@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Contact" icon-name="custom:custom63">
+        <template lwc:if={contact.data}>
+            <div class="slds-var-m-around_medium">
+                <p>{name}</p>
+                <p>{title}</p>
+                <p>
+                    <lightning-formatted-email
+                        value={email}
+                    ></lightning-formatted-email>
+                </p>
+            </div>
+        </template>
+    </lightning-card>
+    <lightning-modal-footer>
+        <lightning-button
+            class="slds-button slds-text-align_right"
+            variant="neutral"
+            label="Close"
+            onclick={handleCancel}>
+        </lightning-button>
+</lightning-modal-footer>
+</template>

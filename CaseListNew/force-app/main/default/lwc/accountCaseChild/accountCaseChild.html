@@ -1,0 +1,14 @@
+<template>
+    <lightning-card>
+        <template if:true={objlist}>
+                <lightning-datatable data={objlist} 
+                columns={objColumns} 
+                key-field="Id" 
+                hide-checkbox-column="true" 
+                show-row-number-column="true" 
+                onsave={handleSave} 
+                draft-values={draftValues}>
+                </lightning-datatable>
+        </template>
+    </lightning-card>
+</template>
